@@ -1,3 +1,7 @@
 .checklistBox{
     padding-top: 10px;
 }
+
+.checklistLabel{
+    display: block;
+}

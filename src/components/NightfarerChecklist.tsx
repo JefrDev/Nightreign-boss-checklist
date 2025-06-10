@@ -18,10 +18,14 @@ function NightfarerChecklist({ bossName, nightfarers }: Props) {
     <div className="checklistBox">
       {nightfarerDone.map((nightfarer) => {
         return (
-          <p>
-            <input type="checkbox" checked={nightfarer.done}></input>
+          <label className="checklistLabel">
+            <input
+              type="checkbox"
+              checked={nightfarer.done}
+              id={nightfarer.name}
+            ></input>
             {nightfarer.name}
-          </p>
+          </label>
         );
       })}
     </div>
