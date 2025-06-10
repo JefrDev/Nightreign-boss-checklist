@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./BossCard.css";
+import NightfarerChecklist from "./NightfarerChecklist";
 import { getBossInfo } from "../utils/bossData";
 
 interface Props {
@@ -23,6 +24,7 @@ function BossCard({ bossName }: Props) {
         {bossName}: {bossInfo?.title}
       </p>
       <h1>{bossInfo?.expedition}</h1>
+      <NightfarerChecklist bossName={bossName}/>
     </div>
   );
 }
