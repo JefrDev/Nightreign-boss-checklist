@@ -1,9 +1,26 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 
     justify-content: center;
     justify-items: center;
+}
+@media (max-width: 1625px) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 1375px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1125px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 875px) {
