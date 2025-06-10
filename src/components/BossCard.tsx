@@ -19,12 +19,13 @@ function BossCard({ bossName }: Props) {
 
   return (
     <div className="box">
-      <img src={bossSrc} alt={bossName}></img>
+      {bossSrc ? <img src={bossSrc} alt={bossName}></img> : null}
+
       <p>
         {bossName}: {bossInfo?.title}
       </p>
       <h1>{bossInfo?.expedition}</h1>
-      <NightfarerChecklist bossName={bossName}/>
+      {bossName ? <NightfarerChecklist bossName={bossName} /> : null}
     </div>
   );
 }
