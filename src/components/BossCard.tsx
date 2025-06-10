@@ -25,7 +25,7 @@ function BossCard({ bossName }: Props) {
         {bossName}: {bossInfo?.title}
       </p>
       <h1>{bossInfo?.expedition}</h1>
-      {bossName ? <NightfarerChecklist bossName={bossName} /> : null}
+      {bossInfo?.nightfarers ? <NightfarerChecklist nightfarers={bossInfo?.nightfarers} bossName={bossName} /> : null}
     </div>
   );
 }
