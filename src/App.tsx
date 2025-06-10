@@ -1,8 +1,8 @@
 import "./App.css";
-import BossCard from "./components/BossCard";
+import BossGrid from "./components/BossGrid";
 
 function App() {
-  return <BossCard bossName="fulghor"></BossCard>;
+  return <BossGrid></BossGrid>;
 }
 
 export default App;
