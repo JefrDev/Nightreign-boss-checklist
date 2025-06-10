@@ -1,9 +1,8 @@
 import "./App.css";
+import BossCard from "./components/BossCard";
 
 function App() {
-  return (
-    <h1>app!</h1>
-  );
+  return <BossCard bossName="heolstor"></BossCard>;
 }
 
 export default App;

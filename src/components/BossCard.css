@@ -1,0 +1,14 @@
+.box {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    width: 250px;
+    height: 600px;
+
+    border-style: solid;
+    border-color: red;
+
+    background-color: lightgrey;
+}
