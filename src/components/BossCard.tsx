@@ -7,6 +7,10 @@ interface Props {
   nightfarerName: string;
 }
 
+function capitalize(word: string) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 function BossCard({ nightfarerName }: Props) {
   const [bossSrc, setBossSrc] = useState("");
   const nightfarerData = getNightfarerInfo(nightfarerName);
@@ -21,7 +25,7 @@ function BossCard({ nightfarerName }: Props) {
     <div className="box">
       {bossSrc ? <img src={bossSrc} alt={nightfarerName}></img> : null}
 
-      <h1 className="nightfarerName">{nightfarerName}</h1>
+      <h1 className="nightfarerName">{capitalize(nightfarerName)}</h1>
       {nightfarerData ? (
         <NightfarerChecklist
           bosses={nightfarerData}
