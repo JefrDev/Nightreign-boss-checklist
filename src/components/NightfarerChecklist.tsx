@@ -24,7 +24,7 @@ function NightfarerChecklist({ nightfarerName, bosses }: Props) {
               checked={boss.completed}
               id={boss.name}
             ></input>
-            {boss.name}
+            {boss.name}, {boss.title}
           </label>
         );
       })}
