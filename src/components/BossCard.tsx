@@ -1,31 +1,33 @@
 import { useEffect, useState } from "react";
 import "./BossCard.css";
 import NightfarerChecklist from "./NightfarerChecklist";
-import { getBossInfo } from "../utils/bossData";
+import { getNightfarerInfo } from "../utils/nightfarerData";
 
 interface Props {
-  bossName: string;
+  nightfarerName: string;
 }
 
-function BossCard({ bossName }: Props) {
+function BossCard({ nightfarerName }: Props) {
   const [bossSrc, setBossSrc] = useState("");
-  const bossInfo = getBossInfo(bossName);
+  const nightfarerData = getNightfarerInfo(nightfarerName);
 
   useEffect(() => {
-    import(`../assets/bosses/${bossName}.png`).then((img) => {
+    import(`../assets/nightfarers/${nightfarerName}.png`).then((img) => {
       setBossSrc(img.default);
     });
-  }, [bossName]);
+  }, [nightfarerName]);
 
   return (
     <div className="box">
-      {bossSrc ? <img src={bossSrc} alt={bossName}></img> : null}
+      {bossSrc ? <img src={bossSrc} alt={nightfarerName}></img> : null}
 
-      <p>
-        {bossName}: {bossInfo?.title}
-      </p>
-      <h1>{bossInfo?.expedition}</h1>
-      {bossInfo?.nightfarers ? <NightfarerChecklist nightfarers={bossInfo?.nightfarers} bossName={bossName} /> : null}
+      <h1 className="nightfarerName">{nightfarerName}</h1>
+      {nightfarerData ? (
+        <NightfarerChecklist
+          bosses={nightfarerData}
+          nightfarerName={nightfarerName}
+        />
+      ) : null}
     </div>
   );
 }

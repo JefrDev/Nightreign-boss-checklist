@@ -1,30 +1,30 @@
 import "./NightfarerChecklist.css";
-import { type Nightfarer } from "../utils/bossData";
+import { type Boss } from "../utils/nightfarerData";
 import { useEffect, useState } from "react";
 
 interface Props {
-  bossName: string;
-  nightfarers: Nightfarer[];
+  nightfarerName: string;
+  bosses: Boss[];
 }
 
-function NightfarerChecklist({ bossName, nightfarers }: Props) {
-  const [nightfarerDone, setNightfarerDone] = useState<Nightfarer[]>([]);
+function NightfarerChecklist({ nightfarerName, bosses }: Props) {
+  const [bossDone, setBossDone] = useState<Boss[]>([]);
 
   useEffect(() => {
-    setNightfarerDone(nightfarers ?? []);
-  }, [bossName]);
+    setBossDone(bosses ?? []);
+  }, [nightfarerName]);
 
   return (
     <div className="checklistBox">
-      {nightfarerDone.map((nightfarer) => {
+      {bossDone.map((boss) => {
         return (
           <label className="checklistLabel">
             <input
               type="checkbox"
-              checked={nightfarer.done}
-              id={nightfarer.name}
+              checked={boss.completed}
+              id={boss.name}
             ></input>
-            {nightfarer.name}
+            {boss.name}
           </label>
         );
       })}
