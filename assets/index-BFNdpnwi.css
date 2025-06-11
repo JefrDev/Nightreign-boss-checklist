@@ -1,0 +1,1 @@
+*{margin:0;padding:0;box-sizing:border-box}.box{margin:0;padding:0;text-align:center;width:300px;height:600px;background-color:#d3d3d3}.nightfarerName{border-top:2px solid darkgray}.checklistBox{padding-top:10px}.checklistLabel{display:block;text-align:left}.grid{display:grid;grid-template-columns:repeat(7,1fr);justify-content:center;justify-items:center;gap:20px}
