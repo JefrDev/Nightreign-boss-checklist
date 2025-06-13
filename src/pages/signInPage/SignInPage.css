@@ -1,0 +1,65 @@
+/* Center the sign-in box on the entire page */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.centerParent {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f6fa;
+}
+
+.signInBox {
+    width: 350px;
+    padding: 32px 24px 24px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.instructions {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.inputGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.signInLabel {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: #444;
+    font-weight: 500;
+}
+
+.signInInput {
+    width: 100%;
+    height: 32px;
+    font-size: 1rem;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+    gap: 12px;
+}
