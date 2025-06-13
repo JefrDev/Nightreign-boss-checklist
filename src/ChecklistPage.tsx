@@ -1,4 +1,4 @@
-import "./App.css";
+import "./ChecklistPage.css";
 import BossGrid from "./components/BossGrid";
 
 function App() {
